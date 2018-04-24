@@ -8,6 +8,7 @@
 
 #import "Cat.h"
 #import <CommonModule/User.h>
+#import <TwoModule/Dog.h>
 #import "ZPMFMDB.h"
 
 @implementation Cat
