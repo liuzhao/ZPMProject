@@ -51,4 +51,17 @@
 
 Yeah！第一模块搞定
 
+然后再按照这个方法，再创建OneModule和TwoModule。
+
+### 3、模块间的互相调用
+
+主工程依赖CommonFramework和其他Framework没有问题，那么如果是模块间的互相调用呢？
+
+其实道理是一样的，比如OneModule要调用TwoModule的类，只需要类似主工程一样，在OneModule的Build Settings的 Header Search Paths 和 Library Search Paths 都加入 ${SRCROOT}/../TwoModule（注意这里是加了/../，因为TwoModule是和OneModule同级，SRCROOT是直接获取到了OneModule，所以必须返回上一级），然后在OneModule的Targets中的General最下面的Linked Frameworks and Libraries里添加TwoModule.framework，这里注意一点，最好加入TwoModule.framework的时候，Status选择Optional而不是默认的Required，因为如果是Required，移动工程文件到别的路径后，会因为找不到路径运行报错。这样你得先删除运行后，再次添加才可以，所以建议还是直接选Optional。
+
+![image](./ShowImages/WX20180424-155602@2x.png)
+
+这样的话，模块间的调用就类似主工程一样，可以任意调用了。
+
+![image](./ShowImages/WX20180424-155812@2x.png)
 
