@@ -12,7 +12,7 @@
 		257F7185208ED9D30093E89F /* OneModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 257F7177208ED9D30093E89F /* OneModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		257F7190208ED9EF0093E89F /* Cat.h in Headers */ = {isa = PBXBuildFile; fileRef = 257F718E208ED9EF0093E89F /* Cat.h */; };
 		257F7191208ED9EF0093E89F /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 257F718F208ED9EF0093E89F /* Cat.m */; };
-		257F719F208EDE520093E89F /* CommonModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257F719E208EDE520093E89F /* CommonModule.framework */; };
+		257F719F208EDE520093E89F /* CommonModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257F719E208EDE520093E89F /* CommonModule.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
