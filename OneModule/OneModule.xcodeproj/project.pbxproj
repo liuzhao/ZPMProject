@@ -13,7 +13,7 @@
 		257F7190208ED9EF0093E89F /* Cat.h in Headers */ = {isa = PBXBuildFile; fileRef = 257F718E208ED9EF0093E89F /* Cat.h */; };
 		257F7191208ED9EF0093E89F /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 257F718F208ED9EF0093E89F /* Cat.m */; };
 		257F719F208EDE520093E89F /* CommonModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257F719E208EDE520093E89F /* CommonModule.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		25E7A958208F0DF3009D5CAF /* TwoModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E7A957208F0DF3009D5CAF /* TwoModule.framework */; };
+		25E7A958208F0DF3009D5CAF /* TwoModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E7A957208F0DF3009D5CAF /* TwoModule.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ADB35C782C70DD6DCAEE6F4F /* libPods-OneModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EFB11C1A7DE93EDB397E4D /* libPods-OneModule.a */; };
 /* End PBXBuildFile section */
 

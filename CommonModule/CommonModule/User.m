@@ -21,7 +21,7 @@
 
 - (void)testModuleOne
 {
-    NSLog(@"ModuleOne调用了它");
+    NSLog(@"ModuleOne调用了CommonModule");
 }
 
 @end
