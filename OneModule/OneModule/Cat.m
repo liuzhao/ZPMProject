@@ -8,6 +8,7 @@
 
 #import "Cat.h"
 #import <CommonModule/User.h>
+#import "ZPMFMDB.h"
 
 @implementation Cat
 
@@ -17,6 +18,9 @@
     
     User *user = [User new];
     [user testModuleOne];
+    
+    ZPMFMDB *db = [ZPMFMDB shareDatabase];
+    [db zpm_createTable:@"OneModuleDB" dicOrModel:@{@"key1": @"abc", @"key2": @"mnb"}];
 }
 
 @end

@@ -13,6 +13,7 @@
 		257F7165208ED2BC0093E89F /* User.h in Headers */ = {isa = PBXBuildFile; fileRef = 257F7163208ED2BC0093E89F /* User.h */; };
 		257F7166208ED2BC0093E89F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 257F7164208ED2BC0093E89F /* User.m */; };
 		257F7194208EDA280093E89F /* OneModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257F7193208EDA280093E89F /* OneModule.framework */; };
+		A4051426D09A949E8010AA47 /* libPods-CommonModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7ED6064D39022F5422B22A /* libPods-CommonModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B2824A274E6E9E1D0BDC1C7 /* Pods-CommonModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonModule.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CommonModule/Pods-CommonModule.debug.xcconfig"; sourceTree = "<group>"; };
+		0E7ED6064D39022F5422B22A /* libPods-CommonModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		257F7149208ED29F0093E89F /* CommonModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257F714C208ED29F0093E89F /* CommonModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonModule.h; sourceTree = "<group>"; };
 		257F714D208ED29F0093E89F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		257F7163208ED2BC0093E89F /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		257F7164208ED2BC0093E89F /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		257F7193208EDA280093E89F /* OneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		268B3E20F45442A1A264E9A3 /* Pods-CommonModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonModule.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CommonModule/Pods-CommonModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				257F7194208EDA280093E89F /* OneModule.framework in Frameworks */,
+				A4051426D09A949E8010AA47 /* libPods-CommonModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,7 @@
 				257F7156208ED29F0093E89F /* CommonModuleTests */,
 				257F714A208ED29F0093E89F /* Products */,
 				257F7192208EDA280093E89F /* Frameworks */,
+				5BC5E7A806F153D8B5EA57E0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,8 +118,18 @@
 			isa = PBXGroup;
 			children = (
 				257F7193208EDA280093E89F /* OneModule.framework */,
+				0E7ED6064D39022F5422B22A /* libPods-CommonModule.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BC5E7A806F153D8B5EA57E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B2824A274E6E9E1D0BDC1C7 /* Pods-CommonModule.debug.xcconfig */,
+				268B3E20F45442A1A264E9A3 /* Pods-CommonModule.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 257F715D208ED29F0093E89F /* Build configuration list for PBXNativeTarget "CommonModule" */;
 			buildPhases = (
+				B924A75018F1E5352FCBC056 /* [CP] Check Pods Manifest.lock */,
 				257F7144208ED29F0093E89F /* Sources */,
 				257F7145208ED29F0093E89F /* Frameworks */,
 				257F7146208ED29F0093E89F /* Headers */,
@@ -219,6 +236,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B924A75018F1E5352FCBC056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommonModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		257F7144208ED29F0093E89F /* Sources */ = {
@@ -366,6 +404,7 @@
 		};
 		257F715E208ED29F0093E89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2824A274E6E9E1D0BDC1C7 /* Pods-CommonModule.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -373,7 +412,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../OneModule";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../OneModule",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = CommonModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -381,7 +423,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../OneModule";
+				LIBRARY_SEARCH_PATHS = (
+					"${SRCROOT}/../OneModule",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhaopin.newproject.CommonModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -391,6 +436,7 @@
 		};
 		257F715F208ED29F0093E89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268B3E20F45442A1A264E9A3 /* Pods-CommonModule.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -398,7 +444,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../OneModule";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../OneModule",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = CommonModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,7 +455,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../OneModule";
+				LIBRARY_SEARCH_PATHS = (
+					"${SRCROOT}/../OneModule",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhaopin.newproject.CommonModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

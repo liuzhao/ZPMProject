@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5F3E908AAB980B1996796CCFF72BC77"
+               BlueprintIdentifier = "ABD5FB0195CCD656E341DA4656DAE04B"
                BlueprintName = "ZPMFMDB"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libZPMFMDB.a">

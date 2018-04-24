@@ -13,6 +13,7 @@
 		257F7190208ED9EF0093E89F /* Cat.h in Headers */ = {isa = PBXBuildFile; fileRef = 257F718E208ED9EF0093E89F /* Cat.h */; };
 		257F7191208ED9EF0093E89F /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 257F718F208ED9EF0093E89F /* Cat.m */; };
 		257F719F208EDE520093E89F /* CommonModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257F719E208EDE520093E89F /* CommonModule.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ADB35C782C70DD6DCAEE6F4F /* libPods-OneModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EFB11C1A7DE93EDB397E4D /* libPods-OneModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		257F718F208ED9EF0093E89F /* Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
 		257F7196208EDB090093E89F /* CommonModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257F719E208EDE520093E89F /* CommonModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB401327206FB6B4FB812E4 /* Pods-OneModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneModule.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-OneModule/Pods-OneModule.debug.xcconfig"; sourceTree = "<group>"; };
+		E14037337803D7731F6C8C66 /* Pods-OneModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneModule.release.xcconfig"; path = "../Pods/Target Support Files/Pods-OneModule/Pods-OneModule.release.xcconfig"; sourceTree = "<group>"; };
+		E3EFB11C1A7DE93EDB397E4D /* libPods-OneModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				257F719F208EDE520093E89F /* CommonModule.framework in Frameworks */,
+				ADB35C782C70DD6DCAEE6F4F /* libPods-OneModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 				257F7181208ED9D30093E89F /* OneModuleTests */,
 				257F7175208ED9D30093E89F /* Products */,
 				257F7195208EDB090093E89F /* Frameworks */,
+				66A44D6AC8FE319AE3A36DFC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +108,18 @@
 			children = (
 				257F719E208EDE520093E89F /* CommonModule.framework */,
 				257F7196208EDB090093E89F /* CommonModule.framework */,
+				E3EFB11C1A7DE93EDB397E4D /* libPods-OneModule.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66A44D6AC8FE319AE3A36DFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABB401327206FB6B4FB812E4 /* Pods-OneModule.debug.xcconfig */,
+				E14037337803D7731F6C8C66 /* Pods-OneModule.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +141,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 257F7188208ED9D30093E89F /* Build configuration list for PBXNativeTarget "OneModule" */;
 			buildPhases = (
+				CD4492FC17B33DE9BB47B9BE /* [CP] Check Pods Manifest.lock */,
 				257F716F208ED9D30093E89F /* Sources */,
 				257F7170208ED9D30093E89F /* Frameworks */,
 				257F7171208ED9D30093E89F /* Headers */,
@@ -208,6 +225,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD4492FC17B33DE9BB47B9BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		257F716F208ED9D30093E89F /* Sources */ = {
@@ -355,6 +393,7 @@
 		};
 		257F7189208ED9D30093E89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABB401327206FB6B4FB812E4 /* Pods-OneModule.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -362,7 +401,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../CommonModule";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../CommonModule",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = OneModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,7 +412,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../CommonModule";
+				LIBRARY_SEARCH_PATHS = (
+					"${SRCROOT}/../CommonModule",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhaopin.newproject.OneModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -380,6 +425,7 @@
 		};
 		257F718A208ED9D30093E89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E14037337803D7731F6C8C66 /* Pods-OneModule.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -387,7 +433,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../CommonModule";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../CommonModule",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = OneModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,7 +444,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../CommonModule";
+				LIBRARY_SEARCH_PATHS = (
+					"${SRCROOT}/../CommonModule",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhaopin.newproject.OneModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
